@@ -9,7 +9,6 @@ function squareDigits(num) {
 console.log(squareDigits(9119)); // 811181
 console.log(squareDigits(765)); // 493625
 
-fdsfsd;
 /*Convertemos o número em uma string para podermos manipular cada dígito individualmente.
 Usamos .split('') para transformar a string em um array de caracteres.
 Utilizamos .map(digit => digit ** 2) para elevar cada dígito ao quadrado.
