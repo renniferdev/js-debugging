@@ -19,14 +19,20 @@ function readLine() {
   return inputString[currentLine++];
 }
 
-function staircase(n) {
-  for (let i = 1; i <= n; i++) {
-    let linha = " ".repeat(n - i) + "#".repeat(i);
-    console.log(linha);
-  }
+function miniMaxSum(arr) {
+  const totalSum = arr.reduce((acc, num) => acc + num, 0);
+
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+
+  const minSum = totalSum - max;
+  const maxSum = totalSum - min;
+
+  console.log(minSum, maxSum);
 }
 
 function main() {
-  const n = parseInt(readLine().trim(), 10);
-  staircase(n);
+  const arr = readLine().split(" ").map(Number);
+  miniMaxSum(arr);
 }
+ 
